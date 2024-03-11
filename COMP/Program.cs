@@ -1,10 +1,10 @@
 ﻿
 /*
-*
-*
-*
+* Author: Saul Barajas
+* Course: COMP003A-L01
+* Purpose: Final
 */
-namespace COMP
+namespace COMP003AFinalRevised
 {
     internal class Program
     {
