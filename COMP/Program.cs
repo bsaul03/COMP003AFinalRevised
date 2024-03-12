@@ -6,8 +6,15 @@
 */
 namespace COMP003AFinalRevised
 {
+    /// <summary>
+    /// Main class of the program.
+    /// </summary>
     internal class Program
     {
+        /// <summary>
+        /// Main method of the program.
+        /// </summary>
+        /// <param name="args">Command-line arguments.</param>
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to the Dating App - New User Profile Intake Form\n");
@@ -54,22 +61,7 @@ namespace COMP003AFinalRevised
             {
                 Console.WriteLine($"Question {i + 1}: {questions[i]}");
                 Console.WriteLine($"Response {i + 1}: {userResponses[i]}\n");
-            }
-            static string ValidateResponse()
-            {
-                string response;
-                // Validate user's response to ensure it is not empty or whitespace
-                do
-                {
-                    response = Console.ReadLine();
-                    if (string.IsNullOrWhiteSpace(response))
-                    {
-                        Console.WriteLine("Response cannot be empty. Please provide a valid response.");
-                    }
-                } while (string.IsNullOrWhiteSpace(response)); // Loop until a valid response is provided
-
-                return response;
-            }
+            } 
                 // Profile Summary Section
                 Console.WriteLine("\nProfile Summary:");
             Console.WriteLine($"Name: {lastName}, {firstName}");
@@ -91,6 +83,12 @@ namespace COMP003AFinalRevised
 
         // Method does not contain parameters because the type of name (first or last) is passed as an argument.
         // The method validates and returns the user's first or last name.
+
+        /// <summary>
+        /// Validates the user's first or last name.
+        /// </summary>
+        /// <param name="nameType">The type of name (first or last).</param>
+        /// <returns>The validated first or last name.</returns>
         static string ValidateName(string nameType)
         {
             // The name variable is declared outside of the loop to ensure its scope is accessible both inside and outside the loop.
@@ -110,6 +108,11 @@ namespace COMP003AFinalRevised
 
         // Method does not contain parameters because it only validates the birth year input.
         // The method validates and returns the user's birth year.
+
+        /// <summary>
+        /// Validates the user's birth year.
+        /// </summary>
+        /// <returns>The validated birth year.</returns>
         static int ValidateBirthYear()
         {
             int birthYear;
@@ -126,6 +129,11 @@ namespace COMP003AFinalRevised
 
         // Method does not contain parameters because it only validates the gender input.
         // The method validates and returns the user's gender.
+
+        /// <summary>
+        /// Validates the user's gender.
+        /// </summary>
+        /// <returns>The validated gender.</returns>
         static char ValidateGender()
         {
             char gender;
@@ -140,6 +148,12 @@ namespace COMP003AFinalRevised
         }
 
         // Method checks if the input string contains numbers or special characters.
+
+        /// <summary>
+        /// Checks if the input string contains numbers or special characters.
+        /// </summary>
+        /// <param name="input">The input string to be checked.</param>
+        /// <returns>True if the input contains numbers or special characters, otherwise false.</returns>
         static bool ContainsNumbersOrSpecialCharacters(string input)
         {
             // The loop iterates over each character in the input string.
@@ -155,6 +169,12 @@ namespace COMP003AFinalRevised
         }
 
         // Method returns the full description of the user's gender based on the provided gender code.
+
+        /// <summary>
+        /// Returns the full description of the user's gender based on the provided gender code.
+        /// </summary>
+        /// <param name="gender">The gender code (M, F, or O).</param>
+        /// <returns>The full description of the user's gender.</returns>
         static string GetFullGenderDescription(char gender)
         {
             switch (gender)
@@ -168,6 +188,25 @@ namespace COMP003AFinalRevised
                 default:
                     return "Unknown"; // This line is there as a fail safe.
             }
+       }
+        /// <summary>
+        /// Validates the user's response to ensure it is not null, empty, or whitespace.
+        /// </summary>
+        /// <returns>The validated user response.</returns>
+        static string ValidateResponse()
+        {
+            string response;
+            // Validate user's response to ensure it is not empty or whitespace
+            do
+            {
+                response = Console.ReadLine();
+                if (string.IsNullOrWhiteSpace(response))
+                {
+                    Console.WriteLine("Response cannot be empty. Please provide a valid response.");
+                }
+            } while (string.IsNullOrWhiteSpace(response)); // Loop until a valid response is provided
+
+            return response;
         }
     }
 }
