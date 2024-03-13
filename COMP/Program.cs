@@ -80,10 +80,6 @@ namespace COMP003AFinalRevised
                 Console.WriteLine($"Response {i + 1}: {userResponses[i]}\n");
             }
         }
-
-        // Method does not contain parameters because the type of name (first or last) is passed as an argument.
-        // The method validates and returns the user's first or last name.
-
         /// <summary>
         /// Validates the user's first or last name.
         /// </summary>
@@ -91,10 +87,6 @@ namespace COMP003AFinalRevised
         /// <returns>The validated first or last name.</returns>
         static string ValidateName(string nameType)
         {
-            // The name variable is declared outside of the loop to ensure its scope is accessible both inside and outside the loop.
-            // The name variable is initialized here but not assigned a value to satisfy C# compiler requirements.
-            // The || operator performs a logical OR operation, checking if either condition is true.
-            // The do-while loop is used here to ensure the prompt is displayed at least once, and the input is validated afterward.
             string name;
             do
             {
@@ -105,9 +97,6 @@ namespace COMP003AFinalRevised
 
             return name;
         }
-
-        // Method does not contain parameters because it only validates the birth year input.
-        // The method validates and returns the user's birth year.
 
         /// <summary>
         /// Validates the user's birth year.
@@ -147,8 +136,6 @@ namespace COMP003AFinalRevised
             return gender;
         }
 
-        // Method checks if the input string contains numbers or special characters.
-
         /// <summary>
         /// Checks if the input string contains numbers or special characters.
         /// </summary>
@@ -167,8 +154,6 @@ namespace COMP003AFinalRevised
             }
             return false;
         }
-
-        // Method returns the full description of the user's gender based on the provided gender code.
 
         /// <summary>
         /// Returns the full description of the user's gender based on the provided gender code.
